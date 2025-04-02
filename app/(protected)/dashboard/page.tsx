@@ -35,28 +35,26 @@ const locations = [
 
 export default function Dashboard() {
   return (
-    <div className="container mx-auto py-10">
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        {locations.map((location, index) => (
-          <Card key={index} className="overflow-hidden">
-            <div className="relative w-full h-48">
-              <Image
-                src={location.image}
-                alt={location.name}
-                fill
-                className="object-cover"
-              />
-            </div>
-            <CardHeader>
-              <CardTitle>{location.name}</CardTitle>
-              <CardDescription>{location.description}</CardDescription>
-            </CardHeader>
-            <CardFooter>
-              <Button className="w-full">Start Approach</Button>
-            </CardFooter>
-          </Card>
-        ))}
-      </div>
-    </div>
+    <>
+      {locations.map((location, index) => (
+        <Card key={index} className="overflow-hidden">
+          <div className="relative w-full h-36">
+            <Image
+              src={location.image}
+              alt={location.name}
+              fill
+              className="object-cover"
+            />
+          </div>
+          <CardHeader>
+            <CardTitle>{location.name}</CardTitle>
+            <CardDescription>{location.description}</CardDescription>
+          </CardHeader>
+          <CardFooter>
+            <Button className="w-full">Start Approach</Button>
+          </CardFooter>
+        </Card>
+      ))}
+    </>
   )
 } 
