@@ -2,6 +2,7 @@
 
 import Hero from '@/components/ui/animated-hero'
 import Image from 'next/image'
+import Link from 'next/link'
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 
@@ -51,7 +52,9 @@ export default function Dashboard() {
             <CardDescription>{location.description}</CardDescription>
           </CardHeader>
           <CardFooter>
-            <Button className="w-full">Start Approach</Button>
+            <Link href="/simulation" className="w-full">
+              <Button className="w-full">Start Approach</Button>
+            </Link>
           </CardFooter>
         </Card>
       ))}
